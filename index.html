@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+    href="https://pyscript.net/releases/2024.1.1/core.css">
+        <script type="module" 
+    src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+        <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link
+    href='https://fonts.googleapis.com/css?family=Anton SC' rel='stylesheet'>
+        <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        />
+        <title>ICT 10 PYTHON</title>
+
+    <link href="style.css" rel="stylesheet"></link>
+
+    </head>
+
+    <body>
+    <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a style="color: white"><img src="IMG_6186.png" class="me-2"width="35px" height="35px">Fit Diners</img></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Resto Info -->
+        <div id="home" class="mt-5 container">
+            <div class="d-flex align-items-center justify-content-center gap-4 bg-dark text-white p-3 rounded container mt-5">
+                <img src="IMG_6186.png" style="width: 100px; height: auto">
+                <div>
+                    <h1 id="storeName" class="text-danger" style="font-family: 'Anton SC'"></h1>
+                    <p id="ownerName"></p>
+                    <p id="yearFounded"></p>
+                </div>
+            </div>
+    <!-- Menu -->
+            <h3 class="mt-4 text-center" style="font-family: 'Anton SC'">Menu Pricelist</h3>
+            <table class="table table-bordered w-50 mx-auto">
+                <thead class="table-danger text-center">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chocolate Protein Shake</td>
+                        <td id="price1" class="text-center"></td>
+                    </tr>
+                    <tr>
+                        <td>Strawberry Protein Shake</td>
+                        <td id="price2" class="text-center"></td>
+                    </tr>
+                    <tr>
+                        <td>Matcha Protein Shake</td>
+                        <td id="price3" class="text-center"></td>
+                    </tr>
+                    <tr>
+                        <td>Fit Delight Cupcake</td>
+                        <td id="price4" class="text-center"></td>
+                    </tr>
+                    <tr>
+                        <td>Protein Bar</td>
+                        <td id="price5" class="text-center"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer class="text-center bg-danger text-white p-3 rounded container mt-5">
+            <p id="opening" class="mb-0"><i class="bi bi-clock"></i></p>
+            </footer>
+            <br />
+            <button type="button" class="btn btn-dark text-center mx-auto d-block">Dine-in Available</button>
+        </div>
+    <!-- Order Section -->
+        <div id="order" class="mt-5 container">
+            <h3 class="text-center mb-4 text-danger" style="font-family: 'Anton SC';">Ordering Form</h3>
+            <div class="row">
+                <!-- For Menu Pictures -->
+                <div class="col-md-5">
+                    <h5 class="mb-3" style="font-family: 'Anton SC';">Menu</h5>
+                    <form id="orderForm">
+                        <div class="form-check d-flex align-items-center mb-3">
+                            <input
+                                name="menu"
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value="150"
+                                id="CPS"
+                            />
+                            <label class="form-check-label w-100" for="CPS">
+                                <img
+                                src="Chocolate Protein Shake.png"
+                                width="80px"
+                                height="90px"
+                                class="me-2 rounded"
+                                alt="Chocolate Protein Shake"
+                                />
+                                Chocolate Protein Shake <span class="text-danger">₱150</span>
+                            </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center mb-3">
+                            <input
+                                name="menu"
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value="170"
+                                id="SPS"
+                            />
+                            <label class="form-check-label w-100" for="SPS">
+                                <img
+                                src="Strawberry Protein Shake.png"
+                                width="80px"
+                                height="90px"
+                                class="me-2 rounded"
+                                alt="Strawberry Protein Shake"
+                                />
+                                Strawberry Protein Shake <span class="text-danger">₱170</span>
+                            </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center mb-3">
+                            <input
+                                name="menu"
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value="180"
+                                id="MPS"
+                            />
+                            <label class="form-check-label w-100" for="MPS">
+                                <img
+                                src="Matcha Protein Shake.png"
+                                width="80px"
+                                height="90px"
+                                class="me-2 rounded"
+                                alt="Matcha Protein Shake"
+                                />
+                                Matcha Protein Shake <span class="text-danger">₱180</span>
+                            </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center mb-3">
+                            <input
+                                name="menu"
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value="80"
+                                id="FDC"
+                            />
+                            <label class="form-check-label w-100" for="FDC">
+                                <img
+                                src="FitDelight.png"
+                                width="80px"
+                                height="90px"
+                                class="me-2 rounded"
+                                alt="Fit Delight Cupcake"
+                                />
+                                Fit Delight Cupcake <span class="text-danger">₱80</span>
+                            </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center mb-3">
+                            <input
+                                name="menu"
+                                class="form-check-input me-2"
+                                type="checkbox"
+                                value="60"
+                                id="PB"
+                            />
+                            <label class="form-check-label w-100" for="PB">
+                                <img
+                                src="Protein Bar.png"
+                                width="80px"
+                                height="90px"
+                                class="me-2 rounded"
+                                alt="Protein Bar"
+                                />
+                                Protein Bar <span class="text-danger">₱60</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <!-- For Menu Form -->
+                <div class="col-md-7">
+                    <h5 style="font-family: 'Anton SC';">Customer Details:</h5>
+                    <br />
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Customer Name:</label>
+                            <input type="text" id="name" placeholder="Enter your name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address:</label>
+                            <input type="text" id="address" placeholder="Enter your address" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="number1" class="form-label">Contact Number:</label>
+                            <input type="number" id="number1" placeholder="Enter contact number" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email1" class="form-label">Email Address:</label>
+                            <input type="email" id="email1" placeholder="Enter email" class="form-control">
+                        </div>
+                        <br />
+                        <button type="button" py-click="placeOrder" class="btn btn-danger">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- order summary section -->
+        <div id="orderSummary" class="container mb-5 mt-3 d-none">
+            <div class="card p-3">
+                <h5 style="font-family: 'Anton SC'; letter-spacing: 1px;">Order Summary</h5>
+                <br />
+                <p class="fw-bold">Order For:<span id="cname" class="fw-normal"></span></p>
+                <p class="fw-bold">Address:<span id="cad" class="fw-normal"></span></p>
+                <p class="fw-bold">Contact Number:<span id="cnum" class="fw-normal"></span></p>
+                <p class="fw-bold">Email:<span id="em" class="fw-normal"></span></p>
+                <p class="fw-bold">Total:<span id="total" class="fw-normal"></span></p>
+            </div>
+        </div>
+    <!-- Contact us section -->
+        <div id="contact" class="mt-5 container">
+            <div class="bg-danger rounded p-4 text-center" style="color: white">
+                <i class="bi bi-envelope fs-2"></i>
+                <h3 class="mt-2" style="font-family: 'Anton SC'">Contact Us</h3>
+                <p class="mb-0">We want to hear your thoughts!</p>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <i class="bi bi-geo-alt fs-2 text-danger mb-2"></i>
+                        <h4 class="fw-bold">Our Location</h4>
+                        <p class="mb-0">Fitworx Gym, Brgy. 175,<br />Caloocan City, Philippines</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <i class="bi bi-telephone fs-2 text-danger mb-2"></i>
+                        <h4 class="fw-bold">Phone Numbers</h4>
+                        <p class="mb-0">Globe: 09178821979<br />Sun: 09173251604</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <i class="bi bi-envelope fs-2 text-danger mb-2"></i>
+                        <h4 class="fw-bold">Email Addresses</h4>
+                        <p class="mb-0">fit.diner@gmail.com<br />FitDiner2025@yahoo.com</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center p-3 shadow-lv">
+                        <i class="bi bi-search fs-2 text-danger mb-2"></i>
+                        <h4 class="fw-bold">Find Us</h4>
+                        <p class="mb-0">FB & IG: Fit Diner<br />Tiktok: fit_2025_diner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- linking python codes -->
+        <script type="py" src="main.py"></script>
+    </body>
+</html>

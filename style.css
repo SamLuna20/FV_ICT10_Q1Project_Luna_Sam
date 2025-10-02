@@ -1,0 +1,15 @@
+body{
+    padding-top: 60px;
+    background-color: antiquewhite;
+}
+#order{
+    border: 5px dotted black;
+    padding-top: 15px;
+}
+
+span div{ /* hides all the other div inside the span tag */
+    display: none;
+}
+span div:last-child{ /* it will only show the last div inside span tag*/
+    display: inline;
+}
